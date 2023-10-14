@@ -1,0 +1,5 @@
+outs:
+- md5: dfb72bdd9dc3608d6a7f674532987f6b
+  size: 22773992
+  hash: md5
+  path: alpaca_data.json

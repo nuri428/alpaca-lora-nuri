@@ -1,0 +1,5 @@
+outs:
+- md5: c23041d256f133e29d42ca7698b8cdf1
+  size: 43379276
+  hash: md5
+  path: alpaca_data_gpt4.json
