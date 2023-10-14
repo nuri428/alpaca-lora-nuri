@@ -1,0 +1,5 @@
+outs:
+- md5: e47cc06e84559ff67a05e4b9a6b68d35
+  size: 276454384
+  hash: md5
+  path: trainset.json
