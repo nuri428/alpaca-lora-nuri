@@ -1,7 +1,7 @@
 import os
 import sys
 from typing import List
-
+from dvclive.huggingface import DVCLiveCallback
 import fire
 import torch
 import transformers
@@ -271,7 +271,7 @@ def train(
         model = torch.compile(model)
 
     trainer.train(resume_from_checkpoint=resume_from_checkpoint)
-
+    trainer.add_callback(DVCLiveCallback(save_dvc_exp=True))
     model.save_pretrained(output_dir)
 
     print(

@@ -1,5 +1,40 @@
 # 🦙🌲🤏 Alpaca-LoRA
 
+
+
+- alpaca lora를 한국어로 학습하기 위해 alpaca-lora를 포크.
+- 한국어 데이터셋 추가. 
+- 구름 데이터셋, 코알파카 데이터셋 
+
+- alpaca-lora [프롬프트 코드](https://gist.github.com/ahoho/ba41c42984faf64bf4302b2b1cd7e0ce)
+
+
+alpaca 7b 학습 
+1. 2023-10-14 : 
+- 결과 너무 안 좋음.... 
+- 한국어 인스트럭션을 인식 못하거나 기본적인 알파카 모델의 영문 인스트럭션도 인식 안됨. 
+  학습 횟수가 적은지가 고민. 
+- 학습 환경 : 3060, 2epoch 140시간 소요. 
+- 학습 아규먼트 
+   --base_model="decapoda-research/llama-7b-hf" 
+   --data_path="./data/kor_trainset.json" 
+   그외는 기본값. 
+   
+2. 2023-10-14:
+- 2차 학습 예정. 
+
+'
+python finetune.py \
+    --base_model='decapoda-research/llama-7b-hf' \
+    --num_epochs=10 \
+    --cutoff_len=512 \
+    --group_by_length \
+    --output_dir='./lora-alpaca' \
+    --lora_target_modules='[q_proj,k_proj,v_proj,o_proj]' \
+    --lora_r=16 \
+    --micro_batch_size=8
+'
+
 - 🤗 **Try the pretrained model out [here](https://huggingface.co/spaces/tloen/alpaca-lora), courtesy of a GPU grant from Huggingface!**
 - Users have created a Discord server for discussion and support [here](https://discord.gg/prbq284xX5)
 - 4/14: Chansung Park's GPT4-Alpaca adapters: https://github.com/tloen/alpaca-lora/issues/340

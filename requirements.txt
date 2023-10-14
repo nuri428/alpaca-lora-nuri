@@ -6,6 +6,8 @@ black
 black[jupyter]
 datasets
 fire
+dvc[ssh]
+dvclive
 git+https://github.com/huggingface/peft.git
 transformers>=4.28.0
 sentencepiece
