@@ -1,0 +1,8 @@
+[core]
+    remote = ssh-storage
+    autostage = true
+['remote "ssh-storage"']
+    url = ssh://nuriMain.synology.me/dvc/dataset/alpaca
+    port = 9222
+    user = nuri
+    
