@@ -22,7 +22,6 @@ alpaca 7b 학습
    
 2. 2023-10-14:
 - 2차 학습 예정. 
-
 '
 python finetune.py \
     --base_model='decapoda-research/llama-7b-hf' \
